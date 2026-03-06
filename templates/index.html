@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Lista de Estudiantes{% endblock %}
+{% block content %}
+<a> </a>
+<br>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>No. control</th>
+            <th>Nombre</th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno</th>
+            <th>Semestre</th>
+            <th>Acciones</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for estudiante in estudiantes %}
+        <tr>
+            <td>{{ estudiante.no_control }}</td>
+            <td>{{ estudiante.nombre }}</td>
+            <td>{{ estudiante.ap_paterno }}</td>
+            <td>{{ estudiante.ap_materno }}</td>
+            <td>{{ estudiante.semestre }}</td>
+            <td>
+               
+            </td> 
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}
