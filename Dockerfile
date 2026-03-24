@@ -1,6 +1,6 @@
 FROM python:3.13.9-alpine3.22
-#RUN addgroup flask && adduser -S -G flask flask
-#USER flask
+RUN addgroup flask && adduser -S -G flask flask
+USER flask
 WORKDIR /app/
 COPY requirements.txt  .
 RUN pip install -r requirements.txt
